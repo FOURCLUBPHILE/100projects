@@ -1,0 +1,177 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+
+
+
+
+    
+
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "CTRS" 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   background-image: radial-gradient( circle farthest-corner at 8.3% 21.6%,  rgba(252,92,125,1) 13.1%, rgba(106,130,251,1) 90% );
+}
+
+h2{
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.section{
+    text-align: center;
+}
+
+  .new{
+
+            padding-bottom: 4px;
+            margin-top: 14px;
+            
+        }
+
+
+
+.new {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 65px;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+         .btn {background-image: linear-gradient(to right, #D38312 0%, #A83279  51%, #D38312  100%)}
+         .btn {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #f61bef;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #ffffff;
+            text-decoration: none;
+          }
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.emoji-name{
+    font-weight: 600;
+    color: rgb(250, 250, 255);
+}
