@@ -7,6 +7,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center;
+    background-color: rgb(0, 0, 0);
 
 
 
@@ -23,27 +24,7 @@ body{
     "wdth" 100,
     "CTRS" 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   background-image: radial-gradient( circle farthest-corner at 8.3% 21.6%,  rgba(252,92,125,1) 13.1%, rgba(106,130,251,1) 90% );
+  
 }
 
 h2{
@@ -84,21 +65,47 @@ h2{
 
 
 
+ .gradient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .gradient-sphere {
+            position: absolute;
+            border-radius: 100%;
+            filter: blur(120px);
+        }
+
+        .sphere-1 {
+            width: 40vw;
+            height: 40vw;
+            background: linear-gradient(40deg, rgba(255, 0, 128, 0.8), rgba(255, 102, 0, 0.4));
+           
+            top: -10%;
+            left: -10%;
+            
+        }
+
+        .sphere-2 {
+            width: 40vw;
+            height: 40vw;
+            background: linear-gradient(240deg, rgba(72, 0, 255, 0.8), rgba(0, 183, 255, 0.4));
+            bottom: -10%;
+            right: -10%;
+            animation: float-2 18s ease-in-out infinite alternate;
+        }
+
+       
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-      
 
 
 
@@ -113,13 +120,14 @@ h2{
             background-size: 200% auto;
             color: white;            
             box-shadow: 0 0 20px #f61bef;
-            border-radius: 10px;
+            border-radius: 15px;
             display: block;
+            cursor: pointer;
           }
 
           .btn:hover {
             background-position: right center; /* change the direction of the change here */
-            color: #ffffff;
+            color: #e5e5e5;
             text-decoration: none;
           }
          
