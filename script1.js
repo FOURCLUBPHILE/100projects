@@ -1,5 +1,8 @@
 const btnEl = document.getElementById("btn");
 const emojiNameEl = document.getElementById("emoji-name");
+const clearBtn = document.getElementById("delete-btn");
+
+
 
 const emoji = [];
 
@@ -70,5 +73,10 @@ const selectedEmoji = emoji[randomNum];
 });
 
 
+ clearBtn.addEventListener("click", () =>{
 
+  emojiHistory.length = 0;  //clear array
+  historyEl.innerHTML ="";  //clear ui
+  
+});
 
