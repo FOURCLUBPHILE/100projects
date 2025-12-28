@@ -4,10 +4,12 @@ const clearBtn = document.getElementById("delete-btn");
 
 
 
-const emoji = [];
-
-const emojiHistory = [];
 const historyEl = document.getElementById("emoji-history");
+
+
+const emoji = [];
+const emojiHistory = [];
+
 
 
 async function getEmoji() {
@@ -43,11 +45,11 @@ getEmoji();
 
 btnEl.addEventListener("click", () => {
   const randomNum = Math.floor(Math.random() * emoji.length);
-
+  const selectedEmoji = emoji[randomNum];
   btnEl.innerText = emoji[randomNum].emojiName;
   emojiNameEl.innerText = emoji[randomNum].emojiCode;
 
-const selectedEmoji = emoji[randomNum];
+
 
   
 
@@ -60,17 +62,14 @@ const selectedEmoji = emoji[randomNum];
     emojiHistory.shift(); // 
   }
 
-
-    historyEl.innerHTML = "";
-  emojiHistory.forEach((emo) => {
-    const span = document.createElement("span");
-    span.innerText = emo;
-    span.style.fontSize = "24px";
-    span.style.marginRight = "5px";
-    historyEl.appendChild(span);
-  });
-
+  localStorage.setItem("emojiHistory", JSON.stringify(emojiHistory));
+  renderHistory();
 });
+
+
+
+
+
 
 
  clearBtn.addEventListener("click", () =>{
@@ -79,4 +78,40 @@ const selectedEmoji = emoji[randomNum];
   historyEl.innerHTML ="";  //clear ui
   
 });
+
+
+
+
+
+  // for getting  saved history
+  function renderHistory() {
+  historyEl.innerHTML = "";
+  emojiHistory.forEach((emo) => {
+    const span = document.createElement("span");
+    span.innerText = emo;
+    span.style.fontSize = "24px";
+    span.style.marginRight = "5px";
+    historyEl.appendChild(span);
+  });
+
+  }
+
+  const savedHistory = localStorage.getItem("emojiHistory");
+
+if (savedHistory) {
+  emojiHistory.push(...JSON.parse(savedHistory));
+  renderHistory();
+}
+
+
+
+
+
+
+clearBtn.addEventListener("click", () => {
+  emojiHistory.length = 0;
+  historyEl.innerHTML = "";
+  localStorage.removeItem("emojiHistory");
+});
+
 
