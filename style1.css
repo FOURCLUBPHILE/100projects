@@ -120,16 +120,17 @@ h2{
             background-size: 200% auto;
             color: white;            
             box-shadow: 0 0 20px #f61bef;
-            border-radius: 15px;
+            border-radius: 25px;
             display: block;
             font-size: 25px;
             cursor: pointer;
+            
             font-family: Verdana, Geneva, Tahoma, sans-serif;
           }
 
           .btn:hover {
             background-position: right center; /* change the direction of the change here */
-            color: #e5e5e5;
+            color: #17c6fb;
             text-decoration: none;
           }
          
@@ -148,7 +149,7 @@ h2{
   cursor: pointer;
   border-radius: 10px;
   padding: 5px 10px;
-  color: white;
+  color: rgb(194, 16, 16);
   font-weight: 400;
   font-size: x-large;
   font-family: "Honk", system-ui;
@@ -168,7 +169,20 @@ delete-btn:hover {
             text-decoration: none;
           }
          
+.hes{
+    font-size: large;
+    color: rgb(200, 200, 255);
+    font-weight: 400;
+    font-family: "Honk", system-ui;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: x-large;
+    font-style: oblique;
+    
 
+  
+
+}
 
 
 
